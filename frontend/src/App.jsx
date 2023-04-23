@@ -4,7 +4,7 @@ import { data } from './data/Data'
 function App() {
   const [selectedOption, setSelectedOption] = useState(null)
   const [selectedQuestion, setSelectedQuestion] = useState(0)
-  const [result, setResult] = useState(false)
+  const [score, setScore] = useState(false)
   function handleNext(event) {
     event.preventDefault();
     if (selectedOption !== null || selectedOption !== undefined) {
@@ -31,9 +31,6 @@ function App() {
           </div>
         ))}
         <button onClick={handleNext}>Next</button>
-        {
-          result && <p>Correct</p>
-        }
       </div>
     </div>
   );
