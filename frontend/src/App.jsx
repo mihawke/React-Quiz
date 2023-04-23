@@ -8,8 +8,6 @@ function App() {
   function handleNext(event) {
     event.preventDefault();
     if (selectedOption !== null || selectedOption !== undefined) {
-      const isCorrect = data[selectedQuestion].options[selectedOption].isCorrect;
-      setResult(isCorrect);
       setSelectedQuestion(selectedQuestion + 1)
     }
     setSelectedOption(null)
