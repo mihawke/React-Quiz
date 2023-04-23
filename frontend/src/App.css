@@ -1,17 +1,41 @@
+*{
+  font-family:Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 .app{
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
   align-items: center;
-  margin-top: 250px;
+  background-color: #2596be;
 }
 .container{
   display: flex;
   flex-direction: column;
   width: 500px;
   align-items: flex-start;
+  background-color: #3f4964;
+  border-radius: 15px;
+  margin-top: 250px;
+  padding: 15px;
+  box-shadow: 5px 5px 25px #3f4964 ;
 }
+
+.question{
+  display: flex;
+  flex-direction: row;
+}
+.question-number{
+  margin-right: 10px;
+}
+
+.container p{
+  font-size: larger;
+  color: white;
+  font-weight: 600;
+}
+
 .options{
   display: flex;
   justify-content: center;
@@ -19,4 +43,25 @@
 }
 .options input{
   margin-right: 15px;
+}
+.options label{
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+  margin-top: 20px;
+}
+button:hover {
+  border-color: #646cff;
 }

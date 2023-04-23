@@ -16,7 +16,10 @@ function App() {
   return (
     <div className="app">
       <div className='container'>
-        <p>Q{selectedQuestion + 1} : {data[selectedQuestion].question}</p>
+        <div className='question'>
+          <p className='question-number'>Q{selectedQuestion + 1}:</p>
+          <p>{data[selectedQuestion].question}</p>
+        </div>
         {data[selectedQuestion].options.map((option, index) => (
           <div key={index} className='options'>
             <input
