@@ -21,7 +21,12 @@ function App() {
         <p>Q{selectedQuestion + 1} : {data[selectedQuestion].question}</p>
         {data[selectedQuestion].options.map((option, index) => (
           <div key={index} className='options'>
-            <input id={index} type='radio' name='option' value={index} onClick={(e) => setSelectedOption(e.target.value)} />
+            <input
+              id={index}
+              type='radio'
+              name='option'
+              value={index}
+              onClick={(e) => setSelectedOption(e.target.value)} />
             <label htmlFor={index}>{option.answer}</label>
           </div>
         ))}
