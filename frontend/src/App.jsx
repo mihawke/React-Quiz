@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="app">
       <div className='container'>
-        <p>{data[selectedQuestion].question}</p>
+        <p>Q{selectedQuestion + 1} : {data[selectedQuestion].question}</p>
         {data[selectedQuestion].options.map((option, index) => (
           <div key={index} className='options'>
             <input id={index} type='radio' name='option' value={index} onClick={(e) => setSelectedOption(e.target.value)} />
