@@ -24,6 +24,7 @@ function App() {
               type='radio'
               name='option'
               value={index}
+              checked={selectedOption == index}
               onClick={(e) => setSelectedOption(e.target.value)} />
             <label htmlFor={index}>{option.answer}</label>
           </div>
