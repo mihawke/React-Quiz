@@ -30,6 +30,7 @@ function App() {
   const [selectedQuestion, setSelectedQuestion] = useState(0)
   const [start, setStart] = useState(true)
   const [score, setScore] = useState(0)
+  const [disableNext,setDisableNext] = useState(true)
   function handleNext(event) {
     event.preventDefault();
     if (selectedOption !== null || selectedOption !== undefined) {
@@ -39,7 +40,12 @@ function App() {
       setSelectedQuestion(selectedQuestion + 1)
     }
     setSelectedOption(null)
-  };
+    setDisableNext(true)
+  }
+  function handleOption(e){
+    setSelectedOption(e.target.value)
+    setDisableNext(false)
+  }
   function handleRetake(){
     setStart(true)
     setSelectedOption(null)
@@ -64,11 +70,11 @@ function App() {
                   name='option'
                   value={index}
                   checked={selectedOption == index}
-                  onClick={(e) => setSelectedOption(e.target.value)} />
+                  onClick={(e) => handleOption(e)} />
                 <label htmlFor={index}>{option.answer}</label>
               </div>
             ))}
-            <button onClick={handleNext}>Next</button>
+            <button onClick={handleNext} disabled={disableNext}>Next</button>
           </>
         }
       </div>
